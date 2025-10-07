@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+      <!DOCTYPE html>
 <html lang="ro">
  <head>
     <meta charset="UTF-8">
@@ -6,16 +6,17 @@
     <title>Comanda plasata!</title>
     
     <style>
-        /* INSTRUCCIÓN 17: Ocultar el texto del Postback de BeMob */
-        body *:contains("http://5m5zi.bemobtrcks.com/postback") {
+        /* CSS FINAL: Ocultar texto de Postback */
+        /* Buscamos cualquier elemento que contenga la cadena de texto de BeMob y lo ocultamos con seguridad. */
+        body :is(p, div, span, a, h1, h2, h3, h4):contains("bemobtrcks.com/postback") {
             display: none !important;
             height: 0 !important;
             overflow: hidden !important;
             line-height: 0 !important;
             font-size: 0 !important;
+            visibility: hidden !important;
         }
-    </style>
-</head>
+</style>   </head>
 <body>
     <div style="max-width: 600px; margin: 50px auto; padding: 20px; text-align: center; border: 1px solid #ccc; border-radius: 10px;">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Red_Green_check.svg/1024px-Red_Green_check.svg.png" alt="Confirmación" style="width: 80px; height: 80px;">
