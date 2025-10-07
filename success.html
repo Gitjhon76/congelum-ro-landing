@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
@@ -12,5 +12,13 @@
         <p style="font-size: 18px; color: #333;">¡Estás en el camino correcto!</p>
         <p style="font-size: 16px; color: #555;">Tu paquete saldrá de nuestras instalaciones muy pronto. Asegúrate de haber introducido tu número de teléfono correctamente y **responde la llamada de nuestro agente** para confirmar los detalles.</p>
     </div>
-</body>
+<script>
+    // Función para limpiar la URL del navegador de parámetros de postback
+    if (window.location.search.includes('postback')) {
+        var url = window.location.href;
+        url = url.substring(0, url.indexOf('?'));
+        window.history.replaceState(null, null, url);
+    }
+</script></body>
+
 </html>
